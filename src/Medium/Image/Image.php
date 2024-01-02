@@ -30,7 +30,7 @@ abstract class Image implements MediumInterface
 
     private function loadImageInfo(): void
     {
-        $imageInfo = getimagesize($this->path);
+        $imageInfo = @getimagesize($this->path);
 
         if ($imageInfo === false) {
             throw new ImageException("Failed to get image information");
