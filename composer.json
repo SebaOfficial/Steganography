@@ -1,0 +1,36 @@
+{
+  "name": "seba/steganography",
+  "description": "Steganography",
+  "homepage": "https://github.com/SebaOfficial/Steganography",
+  "keywords": [
+    "steganography",
+    "images",
+    "media"
+  ],
+  "type": "library",
+  "license": "MIT",
+  "autoload": {
+    "classmap": [
+      "src/"
+    ]
+  },
+  "authors": [
+    {
+      "name": "Sebastiano Racca",
+      "email": "sebastiano@racca.me",
+      "role": "Developer",
+      "homepage": "https://github.com/SebaOfficial"
+    }
+  ],
+  "require-dev": {
+    "friendsofphp/php-cs-fixer": "^3.45"
+  },
+  "scripts": {
+    "lint": "vendor/bin/php-cs-fixer fix src/"
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "preferred-install": "dist",
+    "sort-packages": true
+  }
+}
