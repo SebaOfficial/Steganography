@@ -1,0 +1,5 @@
+{
+  "require": {
+    "seba/steganography": "dev-main"
+  }
+}
