@@ -30,7 +30,7 @@
     "friendsofphp/php-cs-fixer": "^3.45"
   },
   "scripts": {
-    "lint": "vendor/bin/php-cs-fixer fix src/"
+    "lint": "vendor/bin/php-cs-fixer fix .",
   },
   "config": {
     "optimize-autoloader": true,

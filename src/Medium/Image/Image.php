@@ -99,7 +99,7 @@ abstract class Image implements MediumInterface
         }
     }
 
-    public abstract function saveToPath(string $path): void;
+    abstract public function saveToPath(string $path): void;
 
     public function __destruct()
     {

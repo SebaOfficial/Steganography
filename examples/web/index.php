@@ -23,28 +23,28 @@
     <?php
         require dirname(__DIR__) . "/vendor/autoload.php";
 
-        if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["image"]) && $_FILES["image"]["error"] == UPLOAD_ERR_OK && isset($_POST['text'])) {
-            try {
-                move_uploaded_file($_FILES["image"]["tmp_name"], "upload.jpg");
-                $source = new Steganography\Medium\Image\JPG("upload.jpg");
-                $message = new Steganography\Message($_POST['text']);
+    if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["image"]) && $_FILES["image"]["error"] == UPLOAD_ERR_OK && isset($_POST['text'])) {
+        try {
+            move_uploaded_file($_FILES["image"]["tmp_name"], "upload.jpg");
+            $source = new Steganography\Medium\Image\JPG("upload.jpg");
+            $message = new Steganography\Message($_POST['text']);
 
-                $encoder = new Steganography\Encoder($source, $message);
-                $encoder->encode();
+            $encoder = new Steganography\Encoder($source, $message);
+            $encoder->encode();
 
-                echo <<<EOD
+            echo <<<EOD
                     <h3>Encoded Image:</h3>
                     <img src="{$source->getPath()}" width=500 heigth=auto>
                     <br>
                 EOD;
 
-                $decoder = new Steganography\Decoder($source);
-                echo "<p><b>Extracted Message: " . $decoder->decode() . "</b></p>";
+            $decoder = new Steganography\Decoder($source);
+            echo "<p><b>Extracted Message: " . $decoder->decode() . "</b></p>";
 
-            } catch (Steganography\Exception\SteganographyException $e) {
-                echo "<p style='color:red;'>There was an error: " . $e->getMessage() . "</p>";
-            }
+        } catch (Steganography\Exception\SteganographyException $e) {
+            echo "<p style='color:red;'>There was an error: " . $e->getMessage() . "</p>";
         }
+    }
     ?>
 </body>
 </html>

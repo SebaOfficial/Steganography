@@ -25,7 +25,7 @@ class Decoder
 
         for ($i = 0; $i < ($this->src->getWidth() * $this->src->getHeight()); $i++) {
 
-            if($pixel->getX() === $this->src->getWidth()){ // Reached the end of the row of pixels, start on next row
+            if($pixel->getX() === $this->src->getWidth()) { // Reached the end of the row of pixels, start on next row
                 $pixel->incrY();
                 $pixel->setX(0);
             }
