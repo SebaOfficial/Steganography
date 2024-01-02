@@ -35,12 +35,10 @@ class Decoder
             }
 
             if($i > 1 && $i % 8 === 0) { // Every 8 bits
-                // echo "$i: " . substr($binary, -8) . "\n";
                 if(substr($binary, -8) === $this->eom) {
                     return (new BinaryMessage(substr($binary, 0, -8)))->toString();
                 }
             }
-            echo "$i: " . substr(decbin($this->src->getColorAt($pixel)->getBlue()), -1) . "\n";
 
             $binary .= substr(decbin($this->src->getColorAt($pixel)->getBlue()), -1);
 
