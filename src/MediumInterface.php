@@ -52,11 +52,6 @@ interface MediumInterface
     public function setPixel(Pixel $pixel, RGBColor $color): void;
 
     /**
-     * Closes the instance of the medium, freeing the memory.
-     */
-    public function close(): void;
-
-    /**
      * Saves the medium to the specified path.
      * @param string $path The path.
      * @throws \Steganography\Exception\Medium\Exception On failure.

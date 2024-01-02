@@ -99,10 +99,12 @@ abstract class Image implements MediumInterface
         }
     }
 
-    public function close(): void
-    {
-        imagedestroy($this->getImage());
-    }
-
     public abstract function saveToPath(string $path): void;
+
+    public function __destruct()
+    {
+        if (isset($this->img)) {
+            imagedestroy($this->img);
+        }
+    }
 }
