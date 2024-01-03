@@ -35,5 +35,5 @@ compare -metric AE source.jpg source.jpg null:
 ## ⚖️ License
 This project is under the [MIT License](LICENSE).
 
-## 📝 Contacts
+## 🧑‍💻 Contacts
 For any inquiries or support, please contact sebastiano@racca.me or visit my [website](https://racca.me/contacts).
