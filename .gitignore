@@ -4,4 +4,4 @@ composer.lock
 .php-cs-fixer.cache
 
 /docs/
-/.phpdoc/
+/.phpdoc/cache/
