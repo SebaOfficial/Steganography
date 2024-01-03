@@ -27,14 +27,19 @@
     "ext-gd": "*"
   },
   "require-dev": {
-    "friendsofphp/php-cs-fixer": "^3.45"
+    "friendsofphp/php-cs-fixer": "^3.45",
+    "pestphp/pest": "^2.30"
   },
   "scripts": {
-    "lint": "vendor/bin/php-cs-fixer fix ."
+    "lint": "vendor/bin/php-cs-fixer fix .",
+    "test": "vendor/bin/pest"
   },
   "config": {
     "optimize-autoloader": true,
     "preferred-install": "dist",
-    "sort-packages": true
+    "sort-packages": true,
+    "allow-plugins": {
+      "pestphp/pest-plugin": true
+    }
   }
 }
