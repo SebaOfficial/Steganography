@@ -30,7 +30,7 @@ compare source.jpg destination.jpg difference.jpg
 ```
 OR
 ```bash
-compare -metric AE source.jpg source.jpg null:
+compare -metric AE source.jpg destination.jpg null:
 ```
 
 ## ⚖️ License
