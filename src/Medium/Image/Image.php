@@ -19,7 +19,7 @@ abstract class Image implements MediumInterface
     private int $width;
     private int $height;
     private int $type;
-    private string $mimetype;
+    private string $mimeType;
     private \GdImage $img;
 
     public function __construct(string $path)
@@ -36,7 +36,8 @@ abstract class Image implements MediumInterface
             throw new ImageException("Failed to get image information");
         }
 
-        list($this->width, $this->height, $this->type, $this->mimetype) = $imageInfo;
+        list($this->width, $this->height, $this->type) = $imageInfo;
+        $this->mimeType = $imageInfo['mime'];
     }
 
     protected function getImage(): \GdImage
@@ -72,7 +73,7 @@ abstract class Image implements MediumInterface
 
     public function getMimetype(): string
     {
-        return $this->mimetype;
+        return $this->mimeType;
     }
 
     public function getColorAt(Pixel $pixel): RGBColor
