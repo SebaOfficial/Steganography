@@ -18,6 +18,8 @@
         </api>
     </version>
 
-    <settings></settings>
+    <settings>
+        <setting name="graphs.enabled" value="true" />
+    </settings>
 
 </phpdocumentor>
