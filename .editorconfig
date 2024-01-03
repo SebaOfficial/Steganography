@@ -25,5 +25,5 @@ ij_php_space_after_type_cast = false
 ij_php_concat_spaces = false
 
 
-[*.json]
+[*.{json, yml}]
 indent_size = 2

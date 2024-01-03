@@ -11,6 +11,7 @@ composer require seba/steganography
 ```
 
 ## ❔ Usage
+* Full documentation can be found [here](https://steganography.racca.me).
 * Examples can be found [here](examples/).
 
 ## 🫂 Contributing
