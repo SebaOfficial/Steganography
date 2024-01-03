@@ -7,17 +7,33 @@ namespace Steganography;
 use Steganography\Exception\SteganographyException;
 use Steganography\Exception\Message\NotFoundException as MessageNotFoundException;
 
+/**
+ * Decodes a message from a medium.
+ *
+ * @package Steganography
+ * @author Sebastiano Racca <sebastiano@racca.me>
+ */
 class Decoder
 {
     private MediumInterface $src;
     private string $eom;
 
+    /**
+     * Decoder constructor.
+     * @param MediumInterface $source The source medium.
+     * @param string $eom A binary rappresentation of the End Of Message, must be 8 bits long (default is '00000000').
+     */
     public function __construct(MediumInterface $source, string $eom = BinaryMessage::DEFAULT_EOM)
     {
         $this->src = $source;
         $this->eom = $eom;
     }
 
+    /**
+     * Decodes the message from the medium
+     * @return Message A message
+     * @throws MessageNotFoundException If no message is found.
+     */
     public function decode(): Message
     {
         $pixel = new Pixel(0, 0);
