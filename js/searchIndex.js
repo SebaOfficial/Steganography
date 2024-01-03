@@ -48,17 +48,17 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Steganography\\Decoder",
             "name": "Decoder",
-            "summary": "",
+            "summary": "Decodes\u0020a\u0020message\u0020from\u0020a\u0020medium.",
             "url": "classes/Steganography-Decoder.html"
         },                {
             "fqsen": "\\Steganography\\Decoder\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
-            "summary": "",
+            "summary": "Decoder\u0020constructor.",
             "url": "classes/Steganography-Decoder.html#method___construct"
         },                {
             "fqsen": "\\Steganography\\Decoder\u003A\u003Adecode\u0028\u0029",
             "name": "decode",
-            "summary": "",
+            "summary": "Decodes\u0020the\u0020message\u0020from\u0020the\u0020medium",
             "url": "classes/Steganography-Decoder.html#method_decode"
         },                {
             "fqsen": "\\Steganography\\Decoder\u003A\u003A\u0024src",
