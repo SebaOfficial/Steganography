@@ -7,24 +7,22 @@ namespace Steganography\Medium\Image;
 use Steganography\Exception\Medium\Image\Exception as ImageException;
 
 /**
- * Jpeg rappresentation of a medium.
+ * PNG representation of a medium.
  *
  * @package Steganography\Medium\Image
  * @author Sebastiano Racca <sebastiano@racca.me>
  */
-class JPG extends Image
+class PNG extends Image
 {
     protected function createImage(): \GdImage
     {
-        return imagecreatefromjpeg($this->getPath());
+        return imagecreatefrompng($this->getPath());
     }
 
     public function saveToPath(string $path): void
     {
-        if(!imagejpeg($this->getImage(), $path)) {
+        if (!imagepng($this->getImage(), $path)) {
             throw new ImageException("Failed to save image to $path");
         }
     }
 }
-
-class_alias(JPG::class, 'Steganography\Medium\Image\JPEG');
