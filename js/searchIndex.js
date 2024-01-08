@@ -251,6 +251,21 @@ Search.appendIndex(
             "summary": "Saves\u0020the\u0020medium\u0020to\u0020the\u0020specified\u0020path.",
             "url": "classes/Steganography-Medium-Image-JPG.html#method_saveToPath"
         },                {
+            "fqsen": "\\Steganography\\Medium\\Image\\PNG",
+            "name": "PNG",
+            "summary": "PNG\u0020representation\u0020of\u0020a\u0020medium.",
+            "url": "classes/Steganography-Medium-Image-PNG.html"
+        },                {
+            "fqsen": "\\Steganography\\Medium\\Image\\PNG\u003A\u003AcreateImage\u0028\u0029",
+            "name": "createImage",
+            "summary": "",
+            "url": "classes/Steganography-Medium-Image-PNG.html#method_createImage"
+        },                {
+            "fqsen": "\\Steganography\\Medium\\Image\\PNG\u003A\u003AsaveToPath\u0028\u0029",
+            "name": "saveToPath",
+            "summary": "Saves\u0020the\u0020medium\u0020to\u0020the\u0020specified\u0020path.",
+            "url": "classes/Steganography-Medium-Image-PNG.html#method_saveToPath"
+        },                {
             "fqsen": "\\Steganography\\MediumInterface",
             "name": "MediumInterface",
             "summary": "",
